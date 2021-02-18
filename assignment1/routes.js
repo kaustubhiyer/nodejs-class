@@ -25,7 +25,7 @@ const requestHandler = (req, res) => {
         }));
         return req.on('end', () => {
             res.writeHead('302', headers= {
-                'Location': '/',
+                'Location': '/users',
             });
             const response = Buffer.concat(body).toString();
             const user = response.split('=')[1];
